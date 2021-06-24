@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.nav-bar {
+    display: flex;
+    background-color: black;
+    color: white;
+    position:fixed;
+    align-items: center;
+    transition: .8s;
+    animation-name: slide-right;
+    animation-duration: 1s;
+    z-index: 3;
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(-10vw);
+    }
+    100% {
+        transform: translateX(0vw);
+    }
+}
+
+.fa-home, .fa-users, .fa-arrow-alt-circle-right {
+    color:cornsilk;
+    font-size: 3vw;
+}
+.selectedRoute * {
+    color:crimson;
+}
+
+.fa-arrow-alt-circle-right {
+    margin-top: 1.5vh;
+}
+
+.nav-bar a {
+    margin-top: 6vh;
+    display: flex;
+    padding: 2vh;
+    border-radius: 1vw;
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    animation-name: hovernavitem;
+    transition: 1s;
+}
+
+.nav-bar div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3vh;
+    margin-top: 4vh;
+}
+
+.nav-bar a:hover:not(:first-child, .selectedRoute) {
+    background-color: hsl(0, 100%, 30%);
+}
+
+.nav-bar a:active{
+    transform: scale(2);
+}
+
+/*for large screen*/
+@media screen and (min-width: 600px) {
+
+    .nav-bar {
+        flex-direction: column;
+        height:100vh;
+        width:9vw;
+        top:0;
+        overflow: auto;
+    }
+
+    .nav-bar:hover {
+        width: 25vw;
+        transition:0.5s;
+    }
+
+    .nav-bar:hover a {
+        width: 20vw;
+    }    
+    
+    .nav-bar:hover .fa-arrow-alt-circle-right {
+        transform: rotate(-180deg);
+        transition: .5s;
+    }
+
+    .nav-bar .fa-arrow-alt-circle-right {
+        transform: rotate(0deg);
+        transition: 1s;
+    }
+
+    .logo {
+        position: absolute;
+        display: inline;
+        font-family: 'Anton', sans-serif;
+        font-size: 3vw;
+        left:-50vw;
+        transition: .3s;
+    }
+    
+    .nav-bar:hover .logo {
+        position: relative;
+        margin-left: 0;
+        margin-right: 1.5vw;
+        left: 0px;
+        transition: 1s;
+    }
+
+    .nav-bar span:not(.logo) {
+        display: none;
+    }
+    
+    .nav-bar:hover span {
+        display: inline;
+        margin-left: 1vw;
+    }
+}
+
+/*for small screen*/
+@media screen and (max-width:600px) {
+    .nav-bar {
+        position: absolute;
+        flex-direction: row;
+        box-sizing: border-box;
+        top: calc(94*var(--height));
+        width:100vw;
+        height:calc(6*var(--height));
+        justify-content: space-evenly;
+        align-items: stretch;
+    }
+
+    .nav-bar a {
+        margin-top: 1vh;
+    }
+
+    .nav-bar span {
+        display: none;
+    }
+
+    .fa-home, .fa-users, .fa-arrow-alt-circle-right {
+        color:cornsilk;
+        font-size: 8vw;
+    }
+
+    .nav-bar div {
+        display: none;
+    }
+}
+
+
+
