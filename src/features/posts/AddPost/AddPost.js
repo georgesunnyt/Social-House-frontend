@@ -20,9 +20,12 @@ export default function AddPost(props) {
     const handlePostAdd = () => {
         if(title && content) {
             dispatch(postAdded({
-                id: nanoid,
+                id: nanoid(),
                 title,
-                content
+                comments:[],
+                author:'Polly Gray',
+                content,
+                dp:'https://i.imgur.com/b0hZGg4.png'
             }))
         }
     }

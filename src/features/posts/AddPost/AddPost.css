@@ -1,13 +1,11 @@
-.add-post-main {
-    padding-right: 0!important;
-    padding-left: 0!important;
-}
 .new-posts-container, .new-posts-container-collapsed{
     display: flex;
+    padding-left: 1vw;
+    padding-right: 1vw;
     flex-direction: column;
-    background-color: hsl(0, 0%, 68%);
+    background-color: hsl(0, 0%, 82.4%);
     border-radius: .5vw;
-    box-shadow: 3px 3px 6px #0000000d;
+    box-shadow: 0px 3px 6px #00000070;
     padding-bottom: 3vh;
     animation-name: slide-down-background;
     animation-duration: 1s;
@@ -47,6 +45,11 @@
     padding: 2vh;
     font-size: 5vh;
     z-index:2;
+}
+
+.add-post-main h1:hover {
+    background-color:rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 .fa-chevron-down {
@@ -95,6 +98,7 @@
 .add-post-main button {
     display: block;
     background-color: hsl(0, 61%, 40%);
+    box-shadow: 0px 3px 6px black;
     color: white;
     width: 10vw;
     height: 8vh;
@@ -103,6 +107,13 @@
     margin-bottom: 1vh;
     margin-top: 4vh;
     transition: 0.5s;
+    font-size: larger;
+}
+
+.add-post-main button:hover {
+    cursor: pointer;
+    background-color: hsl(0, 77%, 41%);
+
 }
 
 .add-post-main button:active {
@@ -114,6 +125,8 @@
 .new-posts-expanded, .new-posts-collapsed{
     display: flex;
     flex-direction: column;
+    padding-left: 1vw;
+    padding-right: 1vw;
     animation-name: slide-down-details;
     animation-duration: 2s;
     z-index: 1;
