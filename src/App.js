@@ -1,6 +1,7 @@
 import PostList from "./features/posts/PostsList";
 import NavBar from "./features/navBar/NavBar";
 import Users from "./features/users/Users";
+import SinglePost from "./features/posts/SinglePost/SinglePost";
 import './App.css'
 import {Switch, Route, Redirect} from 'react-router-dom';
 import { useEffect } from "react";
@@ -23,6 +24,7 @@ function App() {
         <Route exact path='/users'>
           <Users></Users>
         </Route>
+        <Route exact path='/post/:id' component={SinglePost}/>
         <Redirect from='/' to='/posts' ></Redirect>
       </Switch>
     </>
