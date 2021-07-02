@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-
 .nav-bar {
     display: flex;
     background-color: black;
@@ -111,6 +109,7 @@
 
     .nav-bar span:not(.logo) {
         display: none;
+        font-size: 1.2vw;
     }
     
     .nav-bar:hover span {
@@ -122,10 +121,10 @@
 /*for small screen*/
 @media screen and (max-width:600px) {
     .nav-bar {
-        position: absolute;
+        position: fixed;
         flex-direction: row;
         box-sizing: border-box;
-        top: calc(94*var(--height));
+        bottom:0;
         width:100vw;
         height:calc(6*var(--height));
         justify-content: space-evenly;
