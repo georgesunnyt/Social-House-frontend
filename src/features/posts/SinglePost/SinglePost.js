@@ -37,7 +37,7 @@ export default function SinglePost(props) {
                     </div>
                     {post.comments.length===0?<div className="no-comments">No comments yet</div>:commentsReversed.map((comment)=><div key={comment.comment}>
                         <div className="single-comment">
-                            <img className={'dp'} src={comment.dp}>
+                            <img className={'dp'} src={comment.dp} alt={''}>
                             </img>
                             <div>
                                 {comment.author}: {comment.comment}

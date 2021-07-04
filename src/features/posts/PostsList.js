@@ -18,7 +18,7 @@ function PostList(props) {
                     <h1>{post.title}</h1>
                     <p>{post.content}</p>
                     <div className='profile-flex-container'>
-                        <img className='dp' src={post.dp}/><span className='author'>By {post.author}</span>
+                        <img className='dp' src={post.dp} alt={''}/><span className='author'>By {post.author}</span>
                     </div>
                     <div className='post-item-flex-row'>
                         <button className='like-button'>Like</button>
