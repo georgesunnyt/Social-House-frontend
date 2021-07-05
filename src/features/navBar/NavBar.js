@@ -17,7 +17,7 @@ export default function NavBar(props) {
                     </NavLink>
                     <NavLink exact to='/users' activeClassName="selectedRoute">
                         <FontAwesomeIcon icon={faUsers} ></FontAwesomeIcon>
-                        <span>All users</span>
+                        <span>People</span>
                     </NavLink>
             </div>
         </>
