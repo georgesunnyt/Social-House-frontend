@@ -108,4 +108,7 @@ html {
     .post-item h1{
         font-size: calc(2*var(--height));
     }
+    .dp {
+        height: calc(5*var(--height));
+    }
 }
