@@ -85,6 +85,7 @@
 
 .add-post-main input:focus{
     width: 45vw;
+    border:2px solid rgb(128, 128, 128);
 }
 
 .add-post-main input:hover, .add-post-main textarea:hover {
