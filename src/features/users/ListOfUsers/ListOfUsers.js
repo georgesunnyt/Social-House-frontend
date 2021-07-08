@@ -1,7 +1,7 @@
 import { useGetUsersByPageQuery } from "../usersSlice";
 
 export default function ListOfUsers(props) {
-    const {data, isFetching} = useGetUsersByPageQuery(props.pageNo, {pollingInerval:0});
+    const {data} = useGetUsersByPageQuery(props.pageNo, {pollingInerval:0});
     return(
      <>
            <h2 className='users-title-pc-view'>{props.title}</h2>
