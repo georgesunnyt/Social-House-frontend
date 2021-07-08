@@ -1,17 +1,18 @@
 import { useSelector } from "react-redux";
 import './PostsList.css'
-import AddPost from "./AddPost/AddPost";
 import { useHistory } from "react-router-dom";
 
 function PostList(props) {
 
-    const posts = useSelector(state=>state.posts);
+    let posts = useSelector(state=>state.posts);
+    if(props.user) {
+       posts = posts.filter(post => post.author === props.user)
+    }
     const postsReversed = posts.slice().reverse();
     const history = useHistory();
 
     return(
         <div className="posts-container">
-            <AddPost></AddPost>
             <h1>Posts</h1>
             {postsReversed.map((post)=>
                 <div className='post-item' key={post.id}>
