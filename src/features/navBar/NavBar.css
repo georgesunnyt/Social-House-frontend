@@ -19,7 +19,7 @@
     }
 }
 
-.fa-home, .fa-users, .fa-arrow-alt-circle-right {
+.fa-home, .fa-users, .fa-arrow-alt-circle-right, .fa-user-circle {
     color:cornsilk;
     font-size: 3vw;
 }
@@ -139,7 +139,7 @@
         display: none;
     }
 
-    .fa-home, .fa-users, .fa-arrow-alt-circle-right {
+    .fa-home, .fa-users, .fa-arrow-alt-circle-right, .fa-user-circle {
         color:cornsilk;
         font-size: 8vw;
     }
