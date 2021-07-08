@@ -8,8 +8,8 @@ import { faChevronDown} from '@fortawesome/free-solid-svg-icons'
 
 export default function AddPost(props) {
 
-    const[title, setTitle] = useState();
-    const[content, setContent] = useState();
+    const[title, setTitle] = useState('');
+    const[content, setContent] = useState('');
     const[postStyle, setPostStyle] = useState('new-posts-collapsed')
     const[mainStyle, setMainSyle] = useState('new-posts-container-collapsed')
     const dispatch = useDispatch();
@@ -23,7 +23,7 @@ export default function AddPost(props) {
                 id: nanoid(),
                 title,
                 comments:[],
-                author:'Polly Gray',
+                author:'Polly Gray (you)',
                 content,
                 dp:'https://i.imgur.com/b0hZGg4.png'
             }))
