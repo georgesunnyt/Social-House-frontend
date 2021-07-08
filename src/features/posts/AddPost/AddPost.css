@@ -1,3 +1,10 @@
+.add-post-main {
+    margin-left: 9vw;
+    padding: 0.5vw;
+    animation-name: slide-right;
+    animation-duration: .5s;
+}
+
 .new-posts-container, .new-posts-container-collapsed{
     display: flex;
     padding-left: 1vw;
@@ -10,6 +17,7 @@
     animation-name: slide-down-background;
     animation-duration: 1s;
     box-sizing: border-box;
+    height: 66.979166666vh;
 }
 
 @keyframes slide-down-background {
@@ -181,6 +189,11 @@
 
 /*small screen*/
 @media screen and (max-width:600px) {
+    .add-post-main {
+        margin-left: 0;
+        padding: 0 1vw calc(1*var(--height)) 1vw;
+    }
+
     .new-posts-container, .new-posts-container-collapsed {
         border-radius: 2vw;
         padding: calc(1*var(--height));
