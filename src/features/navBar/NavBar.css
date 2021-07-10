@@ -10,15 +10,6 @@
     z-index: 3;
 }
 
-@keyframes slide-right {
-    0% {
-        transform: translateX(-10vw);
-    }
-    100% {
-        transform: translateX(0vw);
-    }
-}
-
 .fa-home, .fa-users, .fa-arrow-alt-circle-right, .fa-user-circle {
     color:cornsilk;
     font-size: 3vw;

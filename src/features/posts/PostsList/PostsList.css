@@ -23,6 +23,7 @@ html {
         transform: translateX(-10vw);
     }
     100% {
+        opacity: 1;
         transform: translateX(0vw);
     }
 }

@@ -1,0 +1,207 @@
+.login-container {
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-title {
+    color: white;
+    font-size: 7vh;
+    font-family: 'Anton', sans-serif;
+    animation-name: login-title-fade-in;
+    opacity: 0;
+    animation-duration: 2s;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes login-title-fade-in {
+    0%{ 
+        opacity: 0;
+        transform: perspective(100px) translateZ(80px);
+    }
+
+    50%{
+        opacity: 1;
+        transform: perspective(100px) translateZ(0px);
+    }
+
+    75%{
+        transform: translateY(0px);
+    }
+
+    100% {
+        opacity: 1;
+        position: absolute;
+        transform: translateY(-40vh);
+    }
+}
+
+.login-form{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 30vw;
+    height: 45vh;
+    border-radius: 1vw;
+    padding: 1vw;
+    background-color: white;
+    flex-direction: column;
+    animation: login-fade-in 2s ease-in-out 1s forwards;
+    opacity: 0;
+}
+
+
+@keyframes login-fade-in {
+    0% {
+        transform: perspective(200px) translateZ(-100px);
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+        transform: perspective(200px) translateZ(0px);
+    }
+}
+
+.login-form-logged {
+    background-color: black;
+    animation: logged-in 1s 0.5s forwards;
+    opacity: 1;
+}
+
+@keyframes logged-in {
+    100% {
+        transform: translateY(-40vh);
+    }
+}
+
+.login-form-logged input {
+    background-color: black;
+    border: 1px solid black!important;
+}
+
+.login-form-logged .user-login-button {
+    background-color: black!important;
+    color: black;
+}
+
+.login-form input{
+    align-self: center;
+    box-sizing: border-box;
+    width: 25vw;
+    height: 8vh;
+    font-size: 4vh;
+    border-radius: 2vw;
+    border: none;
+    transition: 0.5s;
+    padding: 1vh 1vw;
+    border:1px solid rgba(134, 134, 134, 0.486);
+    margin-bottom: 2vh;
+}
+
+.login-form input:focus{
+    width: 30vw;
+    border:2px solid rgb(128, 128, 128);
+}
+
+.login-form input:hover{
+    box-shadow: 0px 3px 6px black;
+}
+
+.login-button {
+    display: block;
+    background-color: hsl(0, 61%, 40%);
+    box-shadow: 0px 3px 6px black;
+    align-self: center;
+    color: white;
+    width: 25vw;
+    height: 8vh;
+    border-radius: 0.5vw;
+    border: none;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+    transition: 0.5s;
+    font-size: larger;
+}
+
+.login-button:hover {
+    cursor: pointer;
+    background-color: hsl(0, 77%, 41%);
+}
+
+.login-button:active {
+    transform: scale(0.9);
+    background-color: hsl(0, 71%, 41%);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.733);
+}
+
+.guest-login-button div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dp-login {
+    margin-left: 0.5vw;
+    margin-right: 0.2vw;
+}
+
+.button-text {
+    position: relative;
+    animation: slide-right;
+    animation-duration: 1s;
+    animation-delay: 0.7s;
+    animation-fill-mode: both;
+    opacity: 0;
+}
+
+.button-text-logged {
+    position: absolute;
+    opacity: 0;
+}
+
+/*small screen*/
+@media screen and (max-width:600px) {
+
+    .login-title {
+        font-size:calc(4*var(--height));
+        transition: 0.5s;
+    }
+
+    .login-form{
+        position: absolute;
+        display: flex;
+        width: 80vw;
+        border-radius: 4vw;
+        height: calc(40*var(--height));
+    }
+
+    .login-form input{
+        box-sizing: border-box;
+        border-radius: 8vw;
+        width: 65vw;
+        height: calc(6*var(--height));
+        font-size:calc(2.5*var(--height));
+        height: calc(var(--height)*4);
+        margin-bottom: calc(var(--height)*2);
+    }
+
+    .login-form input:focus{
+        width: 70vw;
+        border:2px solid rgb(128, 128, 128);
+    }
+
+    .login-button {
+        width: 65vw;
+        height: calc(var(--height)*5);
+        margin-top: calc(var(--height)*1);
+        font-size: calc(var(--height)*2);
+        border-radius: 2vw;
+    }
+}
