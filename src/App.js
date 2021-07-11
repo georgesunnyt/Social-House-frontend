@@ -29,13 +29,9 @@ function App() {
           {authenticated? <Redirect to='/home'></Redirect> : <Login></Login>}
         </Route>
         <ProtectedRoute exact path='/home' component={Homepage}/>
-        <Route exact path='/users'>
-          <Users></Users>
-        </Route>
-        <Route exact path='/account'>
-          <Account></Account>
-        </Route>
-        <Route exact path='/post/:id' component={SinglePost}/>
+        <ProtectedRoute exact path='/users' component={Users}/>
+        <ProtectedRoute exact path='/account' component={Account}/>
+        <ProtectedRoute exact path='/post/:id' component={SinglePost}/>
         <Redirect from='/' to='/login'/>
       </Switch>
     </>
