@@ -6,37 +6,29 @@ import Account from "./features/account/Account";
 import Login from "./features/login/Login.js";
 import './App.css'
 import {Switch, Route, Redirect} from 'react-router-dom';
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
+import ProtectedRoute from "./features/protectedRoute/ProtectedRoute.js";
+import { useSelector } from "react-redux";
 
 function App() {
 
-  const [authenticated, setAuthenticated] = useState(false)
+  const authenticated = useSelector(state=>state.login.isAuthenticated)
+  console.log(authenticated)
 
   useEffect(()=>{
     const viewportHeight = window.innerHeight*.01;
     const root = document.querySelector(':root');
     root.style.setProperty('--height',`${viewportHeight}px`);
-    setAuthenticated(sessionStorage.getItem('isAuthenticated'))
   },[])
-
-  const authenticate = () => {
-    setAuthenticated(sessionStorage.getItem('isAuthenticated'))
-  }
-
-  const unAuthenticate = () => {
-    setAuthenticated(false)
-  }
  
   return (
     <>
-      {authenticated? <NavBar></NavBar>:<></>}
+      {authenticated?<NavBar></NavBar>:null}
       <Switch>
         <Route exact path='/login'>
-          <Login authenticate={authenticate} unAuthenticate={unAuthenticate}></Login>
+          {authenticated? <Redirect to='/home'></Redirect> : <Login></Login>}
         </Route>
-        <Route exact path='/home'>
-          <Homepage></Homepage>
-        </Route>
+        <ProtectedRoute exact path='/home' component={Homepage}/>
         <Route exact path='/users'>
           <Users></Users>
         </Route>
@@ -44,7 +36,7 @@ function App() {
           <Account></Account>
         </Route>
         <Route exact path='/post/:id' component={SinglePost}/>
-        <Redirect from='/' to='/login' ></Redirect>
+        <Redirect from='/' to='/login'/>
       </Switch>
     </>
   );

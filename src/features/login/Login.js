@@ -1,9 +1,12 @@
-import { useEffect, useState } from 'react'
+import {useState } from 'react'
 import {useHistory} from 'react-router-dom'
+import { authenticate } from './loginSlice';
 import './Login.css'
+import { useDispatch } from 'react-redux';
 
-export default function Login(props) {
+export default function Login() {
 
+    const dispatch = useDispatch()
     const history = useHistory();
     const[loginFormStyle, setLoginFormStyle] = useState('login-form')
     const[buttonTextStyle, setButtonTextStyle] = useState('button-text')
@@ -15,14 +18,10 @@ export default function Login(props) {
         setButtonTextLoggedStyle('button-text')
         setTimeout(()=>{
             sessionStorage.setItem('isAuthenticated', true)
-            props.authenticate()
+            dispatch(authenticate({username: 'Polly'}))
             history.push('/home')
         },2000)
     }
-
-    useEffect(()=>{
-        props.unAuthenticate()
-    },[])
 
     return(
         <div className='login-container'>
@@ -34,7 +33,7 @@ export default function Login(props) {
                 <button className='login-button guest-login-button' onClick={handleLogin}>
                     <div className={buttonTextStyle}>
                         or Continue as  
-                        <img className='dp dp-login' src='https://i.imgur.com/b0hZGg4.png'></img>
+                        <img className='dp dp-login' alt='' src='https://i.imgur.com/b0hZGg4.png'></img>
                         Polly Gray
                     </div>
                     <div className={buttonTextLoggedStyle}>
