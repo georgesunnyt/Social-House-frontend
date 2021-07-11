@@ -13,7 +13,6 @@ import { useSelector } from "react-redux";
 function App() {
 
   const authenticated = useSelector(state=>state.login.isAuthenticated)
-  console.log(authenticated)
 
   useEffect(()=>{
     const viewportHeight = window.innerHeight*.01;

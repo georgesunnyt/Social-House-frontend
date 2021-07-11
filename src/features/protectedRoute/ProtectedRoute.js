@@ -1,9 +1,9 @@
 import { Redirect, Route } from "react-router"
 
-export default function ProtectedRoute({component: Component, props, ...rest}) {
+export default function ProtectedRoute({component: Component,computedMatch,...rest}) {
     const authenticated =  sessionStorage.getItem('isAuthenticated');
     return authenticated? 
     (<Route {...rest}>
-        <Component {...props}></Component>
+        <Component match={computedMatch}></Component>
     </Route>): <Redirect to='/login'></Redirect> 
 }   
