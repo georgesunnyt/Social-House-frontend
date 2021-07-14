@@ -10,7 +10,7 @@
     z-index: 3;
 }
 
-.fa-home, .fa-users, .fa-arrow-alt-circle-right, .fa-user-circle {
+.fa-home, .fa-users, .fa-arrow-alt-circle-right, .fa-user-circle, .fa-sign-out-alt {
     color:cornsilk;
     font-size: 3vw;
 }
@@ -51,6 +51,40 @@
     transform: scale(2);
 }
 
+.logout-button-text {
+    position: relative;
+    animation: logout-message;
+    font-size: 2vw!important;
+    animation-duration: 2s;
+    animation-delay: 0.7s;
+    animation-fill-mode: both;
+    opacity: 0;
+}
+
+@keyframes logout-message {
+    0% {
+        transform: translateX(-10vw);
+    }
+
+    20% {
+        transform: translateX(0vw);
+    }
+
+    100% {
+        opacity: 1;
+        transform:translateY(-30vh);
+    }
+}
+
+.invisible-absolute {
+    position: absolute;
+    opacity: 0;
+}
+
+.invisible {
+    opacity: 0;
+}
+
 /*for large screen*/
 @media screen and (min-width: 600px) {
 
@@ -60,6 +94,10 @@
         width:9vw;
         top:0;
         overflow: auto;
+    }
+
+    .nav-bar-logged-out {
+        width: 100vw!important;
     }
 
     .nav-bar:hover {
@@ -130,7 +168,7 @@
         display: none;
     }
 
-    .fa-home, .fa-users, .fa-arrow-alt-circle-right, .fa-user-circle {
+    .fa-home, .fa-users, .fa-arrow-alt-circle-right, .fa-user-circle , .fa-sign-out-alt{
         color:cornsilk;
         font-size: 8vw;
     }

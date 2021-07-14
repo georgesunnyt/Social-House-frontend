@@ -71,11 +71,11 @@
 
 .login-form-logged {
     background-color: black;
-    animation: logged-in 1s 0.5s forwards;
+    animation: slide-up 1s 0.5s forwards;
     opacity: 1;
 }
 
-@keyframes logged-in {
+@keyframes slide-up {
     100% {
         transform: translateY(-40vh);
     }

@@ -11,10 +11,16 @@ const loginSlice = createSlice({
     reducers: {
         authenticate(state, action) {
             state.isAuthenticated = true
+            sessionStorage.setItem('isAuthenticated', true)
             state.username = action.payload.username
+        },
+        logout(state) {
+            state.isAuthenticated = false
+            state.username = ''
+            sessionStorage.setItem('isAuthenticated', false)
         }
     }
 })
 
-export const {authenticate} = loginSlice.actions;
+export const {authenticate, logout} = loginSlice.actions;
 export default loginSlice.reducer;
