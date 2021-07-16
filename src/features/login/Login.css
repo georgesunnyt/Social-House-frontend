@@ -82,13 +82,11 @@
 }
 
 .login-form-logged input {
-    background-color: black;
-    border: 1px solid black!important;
+    opacity: 0;
 }
 
 .login-form-logged .user-login-button {
-    background-color: black!important;
-    color: black;
+    opacity: 0;
 }
 
 .login-form input{

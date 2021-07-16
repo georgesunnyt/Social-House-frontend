@@ -160,6 +160,19 @@
         align-items: stretch;
     }
 
+    .nav-bar-logged-out {
+        height: 100vh!important;
+    }
+
+    .nav-bar-logged-out {
+        height: 100vh!important;
+    }
+
+    .nav-bar-logged-out a:hover {
+        opacity:0;
+        transition: 0s;
+    }
+
     .nav-bar a {
         margin-top: 1vh;
     }
@@ -175,6 +188,13 @@
 
     .nav-bar div {
         display: none;
+    }
+
+    .nav-bar-logged-out .mobile-goodbye-message {
+        display: block!important;
+        position: absolute;
+        margin-top: 35vh;
+        font-size: 3vh;
     }
 }
 

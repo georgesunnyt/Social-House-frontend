@@ -51,6 +51,9 @@ export default function NavBar() {
                         <span className={logoutButtonStyle}>Logout</span>
                         <span className={logoutMessageStyle}>Good Bye Polly</span>
                     </a>
+                    <div className='mobile-goodbye-message'>
+                        Goodbye Polly
+                    </div>
             </div>
         </>
     )
