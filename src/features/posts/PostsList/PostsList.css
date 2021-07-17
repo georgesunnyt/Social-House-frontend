@@ -109,6 +109,6 @@ html {
         font-size: calc(2*var(--height));
     }
     .dp {
-        height: calc(5*var(--height));
+        height: 10vw;
     }
 }
