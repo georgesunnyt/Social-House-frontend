@@ -10,8 +10,6 @@ export default function Account() {
     const [profileOpacity, setProfileOpacity] =useState(1)
 
     const handleScroll = () => {
-        console.log(document.documentElement.scrollTop)
-        console.log(window.screen.width)
         let x = document.documentElement.scrollTop;
         if(window.screen.width <= 600) {
             setCoverPicYpos(x/1.1)

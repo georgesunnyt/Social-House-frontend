@@ -27,9 +27,6 @@
     object-fit: contain;
 }
 
-.card-details {
-}
-
 /*small screens*/
 @media screen and (max-width: 600px) {
     .account-main-container {
