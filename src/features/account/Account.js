@@ -35,7 +35,7 @@ export default function Account() {
                     <img className='profile-pic' src='https://i.imgur.com/b0hZGg4.png' alt=''></img>
                     <div className='card-details'>
                         <h1>Polly Gray</h1>
-                        <h3>Accountant at Shelby Private Limited</h3>
+                        <h3>Company Treasurer at Shelby Private Limited</h3>
                         <div>
                             <FontAwesomeIcon icon={faMapMarkerAlt}></FontAwesomeIcon>
                             <span> Birmingham</span>
