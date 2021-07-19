@@ -27,6 +27,10 @@
     object-fit: contain;
 }
 
+.card-details {
+    color: var(--font-color)
+}
+
 /*small screens*/
 @media screen and (max-width: 600px) {
     .account-main-container {

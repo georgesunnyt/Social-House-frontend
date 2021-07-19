@@ -5,12 +5,11 @@
     position:fixed;
     align-items: center;
     transition: .8s;
-    animation-name: slide-right;
     animation-duration: 1s;
     z-index: 3;
 }
 
-.fa-home, .fa-users, .fa-arrow-alt-circle-right, .fa-user-circle, .fa-sign-out-alt {
+.fa-home, .fa-users, .fa-arrow-alt-circle-right, .fa-user-circle, .fa-sign-out-alt, .fa-palette {
     color:cornsilk;
     font-size: 3vw;
 }
@@ -92,6 +91,7 @@
         flex-direction: column;
         height:100vh;
         width:9vw;
+        animation-name: slide-right;
         top:0;
         overflow: auto;
     }
@@ -162,6 +162,17 @@
         height:calc(6*var(--height));
         justify-content: space-evenly;
         align-items: stretch;
+        animation-name: slide-up-navbar!important;
+    }
+
+    @keyframes slide-up-navbar {
+        0% {
+            transform: translateY(5vh);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0vh);
+        }
     }
 
     .nav-bar-logged-out {
@@ -181,7 +192,7 @@
         display: none;
     }
 
-    .fa-home, .fa-users, .fa-arrow-alt-circle-right, .fa-user-circle , .fa-sign-out-alt{
+    .fa-home, .fa-users, .fa-arrow-alt-circle-right, .fa-user-circle , .fa-sign-out-alt, .fa-palette{
         color:cornsilk;
         font-size: 8vw;
     }

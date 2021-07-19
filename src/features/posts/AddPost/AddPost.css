@@ -10,7 +10,7 @@
     padding-left: 1vw;
     padding-right: 1vw;
     flex-direction: column;
-    background-color: hsl(0, 0%, 82.4%);
+    background-color: var(--primary-color);
     border-radius: .5vw;
     box-shadow: 0px 3px 6px #00000070;
     padding-bottom: 3vh;
@@ -47,7 +47,8 @@
 .add-post-main h1{
     display: flex;
     margin-top: 1vh;
-    background-color: whitesmoke;
+    background-color: var(--secondary-color);
+    color: var(--font-color);
     border-radius: 2vw;
     box-shadow: 0 1px 3px black;
     padding: 2vh;
@@ -56,7 +57,7 @@
 }
 
 .add-post-main h1:hover {
-    background-color:rgb(255, 255, 255);
+    background-color:var(--secondary-color);
     cursor: pointer;
 }
 

@@ -1,7 +1,7 @@
 import './NavBar.css'
 import {NavLink} from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faUsers, faArrowAltCircleRight, faUserCircle, faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faUsers, faArrowAltCircleRight, faUserCircle, faSignOutAlt, faPalette } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 import { useHistory } from 'react-router'
 import { useDispatch } from 'react-redux'
@@ -45,6 +45,10 @@ export default function NavBar() {
                     <NavLink exact to='/account' activeClassName="selectedRoute" className={hideElement}>
                         <FontAwesomeIcon icon={faUserCircle} ></FontAwesomeIcon>
                         <span>Account</span>
+                    </NavLink>
+                    <NavLink exact to='/theming' activeClassName="selectedRoute" className={hideElement}>
+                        <FontAwesomeIcon icon={faPalette} ></FontAwesomeIcon>
+                        <span>Theming</span>
                     </NavLink>
                     <a onClick={handleLogout}>
                         <FontAwesomeIcon icon={faSignOutAlt} className={logoutButtonStyle}></FontAwesomeIcon>

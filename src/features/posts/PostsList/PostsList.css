@@ -12,10 +12,12 @@ html {
 
 .posts-container h1 {
     font-size: 4vh;
+    color: var(--font-color)
 }
 
 .post-item h1{
     font-size: 3vh;
+    color: var(--font-color);
 }
 
 @keyframes slide-right {
@@ -33,13 +35,14 @@ html {
     padding-left: 1vw;
     padding-right: 1vw;
     height:23vh;
-    background-color: hsl(0, 0%, 82.4%);
+    background-color: var(--primary-color);
     border-radius: 0.5vw;
     box-shadow: 0px 3px 6px #00000070;
 }
 
 .post-item p {
     max-height: 6vh;
+    color: var(--font-color);
     overflow: hidden;
 }
 
@@ -62,6 +65,7 @@ html {
 .post-item-flex-row {
     display: flex;
     position: absolute;
+    color: var(--font-color);
     bottom: 10px;
     width: 98%;
     justify-content: space-between;
@@ -71,6 +75,8 @@ html {
 
 .like-button, .view-button {
     border: none;
+    background-color: var(--secondary-color);
+    color: var(--font-color);
     border-radius: 3vw;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.171);
     transition: 0.5s;
@@ -108,6 +114,7 @@ html {
     .post-item h1{
         font-size: calc(2*var(--height));
     }
+    
     .dp {
         height: 10vw;
     }

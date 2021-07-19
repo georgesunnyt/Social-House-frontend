@@ -11,7 +11,7 @@ export default function ListOfUsers(props) {
      <>
            <h2 className='users-title-pc-view'>{props.title}</h2>
            {!isFetching? data?.data.map((user)=>(
-                <div key={user.id} className='single-comment'>
+                <div key={user.id} className='single-comment' style={{backgroundColor:'var(--secondary-color)'}}>
                     <img src={user.avatar} className='dp' alt=''></img>
                     <div>{user.first_name} {user.last_name}</div>
                 </div>

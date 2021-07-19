@@ -1,0 +1,113 @@
+.theming-container {
+    margin-left: 9vw;
+    min-height: 100vh;
+    background-color: var(--primary-color);
+    animation-name: slide-right;
+    animation-duration: .5s;
+    padding: 0.5vw;
+    z-index: 1;
+    transition: background-color 1s;
+}
+
+.theme-item {
+    background-color: var(--secondary-color);
+    color: var(--font-color);
+    padding: 1vw;
+    height: 14.5vh;
+    border-radius: 2vh;
+    font-size: 3vw;
+    overflow-y: auto;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    margin-bottom: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 1s;
+    box-sizing: border-box;
+}
+
+.theme-name {
+    margin-left: 3vw;
+}
+
+.theme-item:active {
+    transform: scale(0.98);
+    transition: 0.5s;
+}
+
+.theme-item:hover {
+    cursor: pointer;
+}
+
+.theming-container h1 {
+    background-color: var(--secondary-color);
+    color: var(--font-color);
+    margin-top: 0;
+    position: relative;
+    top:10px;
+    border-radius: 2vw;
+    box-shadow: 0 1px 3px black;
+    padding: 2vh;
+    font-size: 5vh;
+    transition: background-color 1s;
+}
+
+.selected {
+    border: rgba(194, 0, 0, 0.863) 3px solid;
+}
+
+.theme-preview-white {
+    margin-left: 5vw;
+    height: 50px;
+    width: 50px;
+    background: hsl(0, 0%, 82.4%);
+    border-radius: 50%;
+}
+
+.theme-preview-black {
+    margin-left: 5vw;
+    height: 50px;
+    width: 50px;
+    background: black;
+    clip-path: circle();
+}
+
+.theme-preview-sunshine {
+    margin-left: 5vw;
+    height: 50px;
+    width: 50px;
+    background: hsl(33.7, 100%, 61.6%);
+    clip-path: circle();
+}
+
+.theme-preview-teal {
+    margin-left: 5vw;
+    height: 50px;
+    width: 50px;
+    background: teal;
+    clip-path: circle();
+}
+
+@media screen and (max-width: 600px) {
+    .theming-container {
+        box-sizing: border-box;
+        margin-left: 0;
+        height: calc(94*var(--height));
+        overflow: auto;
+        padding: 1vw;
+        min-height: 94vh;
+    }
+
+    .theming-container h1 {
+        font-size: calc(3*var(--height));
+        padding: calc(2*var(--height));
+    }
+
+    .theme-item {
+        border-radius: 2vw ;
+        font-size: 6vw;
+        padding: 4vw;
+        margin-bottom: 1vh;
+    }
+}

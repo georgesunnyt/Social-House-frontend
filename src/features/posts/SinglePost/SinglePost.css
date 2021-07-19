@@ -2,7 +2,7 @@
 .single-post-container {
     margin-left: 9vw;
     min-height: 100vh;
-    background-color: hsl(0, 0%, 82.4%);
+    background-color: var(--primary-color);
     animation-name: slide-right;
     animation-duration: .5s;
     padding: 0.5vw;
@@ -10,7 +10,8 @@
 }
 
 .single-post-container h1 {
-    background-color: whitesmoke;
+    background-color: var(--secondary-color);
+    color: var(--font-color);
     margin-top: 0;
     position: relative;
     top:10px;
@@ -21,7 +22,8 @@
 }
 
 .single-post-container p {
-    background-color: whitesmoke;
+    background-color: var(--secondary-color);
+    color: var(--font-color);
     padding: 1vw;
     height: 50vh;
     border-radius: 2vh;
@@ -34,13 +36,16 @@
 .comments-container {
     padding: 0.3vh 2vh;
     border-radius: 2vh;
-    background-color: whitesmoke;
+    background-color: var(--secondary-color);
+    color: var(--font-color);
     min-height: 27vh;
 }
 
 .single-comment, .no-comments{
     display: flex;
     align-items: center;
+    background-color: var(--comment-line-color);
+    color: var(--font-color);
     padding: 10px;
     border-radius: 10px;
     margin: 24px;
@@ -115,7 +120,6 @@
     .comments-container {
         padding: calc(0.3*var(--height)) calc(2*var(--height));
         border-radius: 2vw;
-        background-color: whitesmoke;
         min-height: calc(22*var(--height));
     }
 
