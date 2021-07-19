@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import './Theming.css'
-import axios from 'axios';
 
 export default function Theming() {
 
@@ -68,9 +67,10 @@ export default function Theming() {
                 break;
             case 'teal':
                 setTealSelected('selected')
+                break;
             default:
         }
-    },[])
+    },[root])
 
     return (
         <div className='theming-container'>
