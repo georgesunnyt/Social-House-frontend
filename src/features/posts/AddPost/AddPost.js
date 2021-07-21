@@ -27,7 +27,13 @@ export default function AddPost(props) {
                 content,
                 dp:'https://i.imgur.com/b0hZGg4.png'
             }))
+            resetInput()
         }
+    }
+
+    const resetInput = () => {
+        setTitle('')
+        setContent('')
     }
 
     const handlePostExpansion = () => {
