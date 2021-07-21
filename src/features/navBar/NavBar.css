@@ -159,7 +159,7 @@
         box-sizing: border-box;
         bottom:0;
         width:100vw;
-        height:calc(6*var(--height));
+        height:calc((6 + var(--safe-area-inset-bottom))*var(--height));
         justify-content: space-evenly;
         align-items: stretch;
         animation-name: slide-up-navbar!important;
@@ -185,7 +185,8 @@
     }
 
     .nav-bar a {
-        margin-top: 1vh;
+        margin-top: 0vh;
+        margin-bottom:var(--safe-area-inset-bottom);
     }
 
     .nav-bar span {

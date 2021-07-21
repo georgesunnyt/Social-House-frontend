@@ -102,6 +102,7 @@
     .theming-container h1 {
         font-size: calc(3*var(--height));
         padding: calc(2*var(--height));
+        margin-bottom: calc(5*var(--height));
     }
 
     .theme-item {
