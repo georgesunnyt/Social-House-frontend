@@ -93,7 +93,6 @@
     .theming-container {
         box-sizing: border-box;
         margin-left: 0;
-        height: calc(94*var(--height));
         overflow: auto;
         padding: 1vw;
         min-height: 94vh;
