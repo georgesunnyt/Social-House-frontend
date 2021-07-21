@@ -101,9 +101,9 @@
     .single-post-container {
         box-sizing: border-box;
         margin-left: 0;
-        height: calc(94*var(--height));
         overflow: auto;
         padding: 1vw;
+        margin-bottom: calc(6*var(--height));
     }
 
     .single-post-container h1 {

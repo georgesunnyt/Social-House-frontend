@@ -192,7 +192,7 @@
 @media screen and (max-width:600px) {
     .add-post-main {
         margin-left: 0;
-        padding: 0 1vw calc(1*var(--height)) 1vw;
+        padding: calc(1*var(--height)) 1vw calc(1*var(--height)) 1vw;
     }
 
     .new-posts-container, .new-posts-container-collapsed {

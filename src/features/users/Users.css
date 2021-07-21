@@ -52,6 +52,7 @@
     .users-page-container {
         margin-left: 0;
         padding: 1vw;
+        margin-bottom: calc(7*var(--height));
     }
 
     .users-list-main-flex-container {
