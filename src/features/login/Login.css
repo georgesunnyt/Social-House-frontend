@@ -184,9 +184,8 @@
         box-sizing: border-box;
         border-radius: 8vw;
         width: 65vw;
-        height: calc(6*var(--height));
+        height: calc(6.5*var(--height));
         font-size:calc(2.5*var(--height));
-        height: calc(var(--height)*4);
         margin-bottom: calc(var(--height)*2);
     }
 
@@ -197,7 +196,7 @@
 
     .login-button {
         width: 65vw;
-        height: calc(var(--height)*5);
+        height: calc(var(--height)*6.5);
         margin-top: calc(var(--height)*1);
         font-size: calc(var(--height)*2);
         border-radius: 2vw;
