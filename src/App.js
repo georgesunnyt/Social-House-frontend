@@ -10,6 +10,7 @@ import {Switch, Route, Redirect} from 'react-router-dom';
 import { useEffect} from "react";
 import ProtectedRoute from "./features/protectedRoute/ProtectedRoute.js";
 import { useSelector } from "react-redux";
+import ScrollToTop from "./features/scrollToTop/ScrollToTop.js";
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
   return (
     <>
       {authenticated?<NavBar></NavBar>:null}
+      <ScrollToTop></ScrollToTop>
       <Switch>
         <Route exact path='/login'>
           {authenticated? <Redirect to='/home'></Redirect> : <Login></Login>}
