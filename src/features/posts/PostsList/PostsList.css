@@ -31,10 +31,13 @@ html {
 }
 .post-item {
     position: relative;
+    box-sizing: border-box;
     margin-top: 0.5vw;
+    margin-bottom: 1.7vh;
+    padding-top: 0vh;
+    padding-bottom: 2vh;
     padding-left: 1vw;
     padding-right: 1vw;
-    height:23vh;
     background-color: var(--primary-color);
     border-radius: 0.5vw;
     box-shadow: 0px 3px 6px #00000070;
@@ -43,12 +46,15 @@ html {
 .post-item p {
     max-height: 6vh;
     color: var(--font-color);
+    text-overflow: ellipsis;
+    white-space: nowrap;
     overflow: hidden;
 }
 
 .profile-flex-container {
     display: flex;
     align-items: center;
+    margin-bottom: 3vh
 }
 
 .dp {
@@ -65,10 +71,8 @@ html {
 
 .post-item-flex-row {
     display: flex;
-    position: absolute;
     color: var(--font-color);
-    bottom: 10px;
-    width: 98%;
+    width: 100%;
     justify-content: space-between;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 300;
@@ -98,13 +102,12 @@ html {
         box-sizing: border-box;
         margin-left: 0;
         margin-top: 1vw;
-        height: calc(94*var(--height));
+        height: calc(50*var(--height));
         padding: 0 1vw calc(1*var(--height)) 1vw;
     }
 
     .post-item {
         margin-top: 0.5vw;
-        height:calc(22*var(--height));
         border-radius: 2vw;
     }
 
@@ -113,7 +116,13 @@ html {
     }
     
     .post-item h1{
-        font-size: calc(2*var(--height));
+        padding-top: 1vh;
+        font-size: calc(2.3*var(--height));
+    }
+
+    .post-item-flex-row {
+        width: 98%;
+        margin-left: 1%;
     }
     
     .dp {
