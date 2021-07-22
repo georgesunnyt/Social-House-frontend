@@ -17,7 +17,6 @@ export default function Login() {
         setButtonTextStyle('button-text-logged')
         setButtonTextLoggedStyle('button-text')
         setTimeout(()=>{
-            sessionStorage.setItem('isAuthenticated', true)
             dispatch(authenticate({username: 'Polly'}))
             history.push('/home')
         },2000)
