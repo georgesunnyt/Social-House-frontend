@@ -25,7 +25,9 @@ export default function AddPost(props) {
                 comments:[],
                 author:'Polly Gray (you)',
                 content,
-                dp:'https://i.imgur.com/b0hZGg4.png'
+                dp:'https://i.imgur.com/b0hZGg4.png',
+                dislikes:[],
+                likes: []
             }))
             resetInput()
         }
