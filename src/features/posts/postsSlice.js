@@ -7,7 +7,9 @@ const initialState = [
      content: 'I happened to switch my car to a Bentley after a weird turn of events. I must say this car never ceases to surprise me. My favourite part about this car is the 6 and a half liter v8 engine. It produces a lot of torque in almost any gear. The gearbox is quite fast as well. The silver paint on this vehicle looks like its of very high quality. I normally prefer black paint but this is kind of growing on me',
      comments: [],
      author: 'Thomas Shelby',
-     dp: 'https://imgur.com/hKfJx3l.png'
+     dp: 'https://imgur.com/hKfJx3l.png',
+     dislikes:[],
+     likes:[]
     },
     {
      id:'2',
@@ -15,7 +17,9 @@ const initialState = [
      content: 'The Shelby Limited has opened up a pub in London which goes by the name of Shelby Pubs. Do drop by ladies and gentleman',
      comments: [],
      author: 'Polly Gray (you)',
-     dp: 'https://i.imgur.com/b0hZGg4.png' 
+     dp: 'https://i.imgur.com/b0hZGg4.png',
+     dislikes:[],
+     likes:[] 
     },
     {
      id:'3',
@@ -23,7 +27,9 @@ const initialState = [
      content: 'My sources in Germany tell me they have come across this particular person who goes by the name of Adolf. I hear he has got a strong dislike towards Jewish people. I find this unnacceptable and if he does not mend his ways, i shall be taking care of him soon.',
      comments: [],
      author: 'Alfie Solomons',
-     dp: 'https://i.imgur.com/GSmyMmh.png'
+     dp: 'https://i.imgur.com/GSmyMmh.png',
+     dislikes:[],
+     likes:[]
     },
     {
      id:'4',
@@ -31,7 +37,9 @@ const initialState = [
      content: 'As a part of our upcoming Christmans giveaway contests, we will be announcing the winners of 3 cars that will be given away by the Shelby Motor Corporation',
      comments: [],
      author: 'Polly Gray (you)',
-     dp: 'https://i.imgur.com/b0hZGg4.png' 
+     dp: 'https://i.imgur.com/b0hZGg4.png',
+     dislikes:[],
+     likes:[] 
     },
     {
      id:'5',
@@ -45,7 +53,9 @@ const initialState = [
          }
      ],
      author: 'Thomas Shelby',
-     dp: 'https://imgur.com/hKfJx3l.png'   
+     dp: 'https://imgur.com/hKfJx3l.png',
+     dislikes:[],
+     likes:[]   
     },
     {
      id: '6',
@@ -53,7 +63,9 @@ const initialState = [
      content: 'I happen to know  a painter by the name of Ruben who is really good at painting portraits. I dont think he is getting the kind of attention that his work deserves. If any of you are looking for a painter of this sort, please do get in touch with me',
      comments:[],
      author: 'Polly Gray (you)',
-     dp: 'https://i.imgur.com/b0hZGg4.png'
+     dp: 'https://i.imgur.com/b0hZGg4.png',
+     dislikes:[],
+     likes:[]
     },
     {
      id: '7',
@@ -61,7 +73,9 @@ const initialState = [
      content: 'My wifes pregnant and i want all you boys and girls to join us at the Garrisons tonight. Drinks on us. By order of the Peaky Blinders',
      comments:[],
      author: 'Arthur Shelby',
-     dp:'https://i.imgur.com/QYlwubq.png'
+     dp:'https://i.imgur.com/QYlwubq.png',
+     dislikes:[],
+     likes:[]
     },
     {
      id:'8',
@@ -80,7 +94,9 @@ const initialState = [
          }
      ],
      author: 'Polly Gray (you)',
-     dp: 'https://i.imgur.com/b0hZGg4.png' 
+     dp: 'https://i.imgur.com/b0hZGg4.png',
+     dislikes:[],
+     likes:['Thomas', 'Ada', 'Arthur', 'Lisa', 'John'] 
     },
     {
      id: '9',
@@ -88,7 +104,9 @@ const initialState = [
      content: 'I assure the people of Birmingham that every illegal and corrupt activity will be wiped away from these soon. Nowone is above the law, not even the peaky blinders',
      comments:[],
      author: 'Inspector Campbell',
-     dp: 'https://i.imgur.com/KOcJzKi.jpeg'
+     dp: 'https://i.imgur.com/KOcJzKi.jpeg',
+     dislikes:['Thomas'],
+     likes:[]
     }
 
 ]
@@ -106,8 +124,34 @@ const postsSlice = createSlice ({
             if(post){
                 post.comments.push(commentObject);
             }
+        },
+        postLiked(state, action) {
+            const {username, id} = action.payload
+            const post = state.find(post=>post.id===id);
+            post.likes.push(username)
+        },
+        postUndisliked(state, action) {
+            const {username, id} = action.payload
+            const post = state.find(post=>post.id===id)
+            const dislikes = [...post.dislikes]
+            const index = dislikes.indexOf(username);
+            dislikes.splice(index, 1);
+            post.dislikes = dislikes;
+        },
+        postDisliked(state, action) {
+            const {username, id} = action.payload
+            const post = state.find(post=>post.id===id);
+            post.dislikes.push(username)
+        },
+        postUnliked(state, action) {
+            const {username, id} = action.payload
+            const post = state.find(post=>post.id===id)
+            const likes = [...post.likes]
+            const index = likes.indexOf(username);
+            likes.splice(index, 1);
+            post.likes = likes;
         }
     }
 })
-export const {postAdded, commentAdded} = postsSlice.actions;
+export const {postAdded, commentAdded, postLiked, postUnliked, postDisliked, postUndisliked} = postsSlice.actions;
 export default postsSlice.reducer;
