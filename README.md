@@ -1,6 +1,7 @@
 
 This project is the front end for a social media web app that puts user experience and simplicity at its centre.
 
+Created with love using React.
 
 Features animations that make the web app feel like a native app. All the animations are handled by only css written from scratch and no third party styling libraries have been used.
 
