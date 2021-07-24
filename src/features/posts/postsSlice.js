@@ -105,7 +105,7 @@ const initialState = [
      comments:[],
      author: 'Inspector Campbell',
      dp: 'https://i.imgur.com/KOcJzKi.jpeg',
-     dislikes:['Thomas'],
+     dislikes:[],
      likes:[]
     }
 
