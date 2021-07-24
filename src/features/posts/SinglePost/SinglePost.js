@@ -11,6 +11,10 @@ export default function SinglePost(props) {
 
     const [comment, setComment] = useState('');
 
+    const resetCommentInput = () => {
+        setComment ('');
+    }
+
     const pushComment = () => {
         if(comment !== '') {
             dispatch(commentAdded({
@@ -21,6 +25,7 @@ export default function SinglePost(props) {
                     dp:'https://i.imgur.com/b0hZGg4.png'
                 }
             }))
+            resetCommentInput()
         }
     }
     
