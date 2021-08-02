@@ -33,6 +33,7 @@ export default function Login() {
                     <div className={buttonTextStyle}>
                         or Continue as  
                         <img className='dp dp-login' alt='' src='https://i.imgur.com/b0hZGg4.png'></img>
+                        <img className='cover-pic' style={{display:'none'}} src='https://images8.alphacoders.com/885/885522.jpg' alt=''></img>
                         Polly Gray
                     </div>
                     <div className={buttonTextLoggedStyle}>
